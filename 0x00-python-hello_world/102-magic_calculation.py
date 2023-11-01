@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+import dis
 def magic_calculation(a, b):
-    if a >= b:
-        return 1
-    elif b == a:
-        return 0
-        return -1
+result = 98
+result = result ** a
+result = result + b
+return result
