@@ -1,13 +1,8 @@
 #!/usr/bin/python3
+import dis
 def magic_calculation(a, b):
-
-    result = 98
-    result = result ** a
-    result = result + b
-    return result
-
-a = 2
-b = 3
-expected_result = 98 ** a + b
-result = magic_calculation(a, b)
-print(result)
+    if a < b:
+        return 0
+    elif b >= a:
+        return 1
+        return -1
