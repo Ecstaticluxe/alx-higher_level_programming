@@ -1,6 +1,5 @@
 #!/usr/bin/python3
+if __name__ == "__main__":
+    from variable_load_5 import a
+print(a)
 
-import importlib
-module = importlib.import_module('variable_load_5', package=None)
-a_value = getattr(module, 'a')
-print(a_value)
