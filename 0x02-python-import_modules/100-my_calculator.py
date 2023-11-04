@@ -32,4 +32,3 @@ if __name__ == "__main__":
         result = div(a, b)
 
     print(f"{a} {operator} {b} = {result}")
-
