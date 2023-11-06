@@ -28,7 +28,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 * @head: head of list
 * Return: 0 if it is not a palindrome, 1 if it is a palindrome
 */
-
 int is_palindrome(listint_t **head)
 {
 	listint_t *head2 = *head;
@@ -36,6 +35,7 @@ int is_palindrome(listint_t **head)
 
 	if (*head == NULL || head2->next == NULL)
 		return (1);
+
 	while (head2 != NULL)
 	{
 		add_nodeint(&aux, head2->n);
@@ -46,7 +46,7 @@ int is_palindrome(listint_t **head)
 	{
 		if ((*head)->n != aux2->n)
 		{
-			free_listint(aux);
+		free_listint(aux);
 			return (0);
 		}
 		*head = (*head)->next;
