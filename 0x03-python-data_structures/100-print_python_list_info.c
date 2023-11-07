@@ -1,12 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <Python.h>
-#!/usr/bin/python3
 
-/**
- * print_python_list_info - Prints basic info about a Python list
- * @p: PyObject pointer to the Python list
- */
 void print_python_list_info(PyObject *p)
 {
     Py_ssize_t size, alloc, i;
