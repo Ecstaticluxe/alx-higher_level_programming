@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-def uppercase(str):
 
-    for i in str:
+def uppercase(input_str):
+    result = ""
 
-        if ord("a") <= ord(i) <= ord("z"):
+    for char in input_str:
+        if 'a' <= char <= 'z':
+            result += chr(ord(char) - 32)
+        else:
+            result += char
 
-             i = chr(ord(i) - 32)
-print("{:s}".format(i), end="")
+    return result
 
-print ()
+input_string = "Best School 98 Battery street"
+uppercase_string = uppercase(input_string)
+print(uppercase_string)
