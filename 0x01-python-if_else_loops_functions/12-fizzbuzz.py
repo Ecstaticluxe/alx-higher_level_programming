@@ -1,20 +1,14 @@
 #!/usr/bin/python3
+
 def fizzbuzz():
-
     for c in range(1, 100):
-
         if c % 3 == 0 and c % 5 == 0:
-
-            print("FizzBuzz ", end="")
-
+            print("FizzBuzz")
         elif c % 3 == 0:
-
-            print("Fizz ", end="")
-
+            print("Fizz")
         elif c % 5 == 0:
-
-            print("Buzz ", end="")
-
+            print("Buzz")
         else:
+            print(c)
 
-            print("{:d} ".format(c), end="")
+fizzbuzz()
