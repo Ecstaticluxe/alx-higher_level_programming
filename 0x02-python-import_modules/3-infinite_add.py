@@ -7,4 +7,3 @@ def add_args(argv):
 
 if __name__ == "__main__":
     add_args(sys.argv)
-
