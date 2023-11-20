@@ -4,4 +4,4 @@ def raise_exception():
     try:
         result = "string" + 5
     except TypeError as e:
-        print("Type error:", e)
+        print("Exception raised")
