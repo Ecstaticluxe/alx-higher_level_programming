@@ -7,3 +7,4 @@ def raise_exception():
     except TypeError as e:
 
         print("Type error:", e)
+
