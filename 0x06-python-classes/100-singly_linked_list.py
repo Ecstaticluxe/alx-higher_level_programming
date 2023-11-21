@@ -6,6 +6,9 @@ class Node:
     """Represent a Node."""
 
     def __init__(self, data, next_node=None):
+        """initialize a node
+        Args
+    """
         self.data = data
         self.next_node = next_node
 
