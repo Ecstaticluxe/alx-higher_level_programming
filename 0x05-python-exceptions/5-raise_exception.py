@@ -3,4 +3,4 @@
 def raise_exception():
     try:
         result = "string" + 5
-        print("Exception raised")
+    print("Exception raised")
