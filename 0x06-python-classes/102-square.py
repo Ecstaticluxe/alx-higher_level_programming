@@ -32,31 +32,37 @@ class Square:
         return self.__size ** 2
 
     def __eq__(self, other):
+        """Define the == comparison to a Square."""
         if isinstance(other, Square):
             return self.area() == other.area()
         return NotImplemented
 
     def __ne__(self, other):
+        """Define the != comparison to a Square."""
         if isinstance(other, Square):
             return self.area() != other.area()
         return NotImplemented
 
     def __lt__(self, other):
+        """Define the < comparison to a Square."""
         if isinstance(other, Square):
             return self.area() < other.area()
         return NotImplemented
 
     def __le__(self, other):
+        """Define the <= comparison to a Square."""
         if isinstance(other, Square):
             return self.area() <= other.area()
         return NotImplemented
 
     def __gt__(self, other):
+        """Define the > comparison to a Square."""
         if isinstance(other, Square):
             return self.area() > other.area()
         return NotImplemented
 
     def __ge__(self, other):
+        """Define the >= comparison to a Square."""
         if isinstance(other, Square):
             return self.area() >= other.area()
         return NotImplemented
