@@ -54,6 +54,7 @@ class SinglyLinkedList:
         new_node = Node(value)
         if self.head is None or self.head.data > value:
             new_node.next_node = self.head
+            """Get the data of the Singly_linked lists."""
             self.head = new_node
             return
 
@@ -62,6 +63,7 @@ class SinglyLinkedList:
             current = current.next_node
 
         new_node.next_node = current.next_node
+        """Set the current node,"""
         current.next_node = new_node
 
     def __str__(self):
@@ -70,4 +72,5 @@ class SinglyLinkedList:
         while current is not None:
             result += str(current.data) + "\n"
             current = current.next_node
+            """Return the next node."""
         return result
