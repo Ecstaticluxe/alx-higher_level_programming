@@ -18,7 +18,6 @@ class Square:
         return self.__size
 
     @size.setter
-        """et the current size of the square."""
     def size(self, value):
         if not isinstance(value, (int, float)):
             raise TypeError("size must be a number")
@@ -28,7 +27,7 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Reeturn the size of the area."""
+        """G4t the size of the area."""
         return self.__size ** 2
 
     def __eq__(self, other):
