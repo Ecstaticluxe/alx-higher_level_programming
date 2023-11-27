@@ -22,7 +22,8 @@ class Rectangle:
     def width(self, value):
         '''Set the value of the Rectangle.
         Args:
-        value (int): The value of teh rectangle.
+        value (int): The value of teh rectangle
+        .
         Raises:
         ValError: must be less than or equal to 0.
         TypeError: must be an integer.
