@@ -15,13 +15,18 @@ class Rectangle:
 
     @property
     def width(self):
-        '''Set the width of the rectangle.
-        Args:
-        '''
+        '''Define the width of the rectangle.'''
         return self.__width
 
     @width.setter
     def width(self, value):
+        '''Set the value of the Rectangle.
+        Args:
+        value (int): The value of teh rectangle.
+        Raises:
+        ValError: must be less than or equal to 0.
+        TypeError: must be an integer.
+        '''
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -46,4 +51,5 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
+        '''Calculate and return the perimeter of the Rectangle'''
         return 2 * (self.width + self.height)
