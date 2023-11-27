@@ -1,17 +1,38 @@
+#!/usr/bin/python3
+'''Define a Clas Rectangle.'''
+
+
 class Rectangle:
+    '''Represent a Rectangle class'''
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
+        '''Initialize a rectangle instance.
+        Args:
+        size (int): The size of the rectangle.
+        width (int): The width hof the rectangle.
+        height (int): The height of the rectangle
+        '''
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
+        '''Define the width of the rectangle'''
         return self.__width
 
     @width.setter
     def width(self, value):
+        '''set the value of the rectangle.
+
+        Args:
+        value: The value of the rectangle.
+
+        Raises:
+        TypeError: width must be onteger
+        ValueError: idth must be less greater than or equal to 0
+        '''
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
