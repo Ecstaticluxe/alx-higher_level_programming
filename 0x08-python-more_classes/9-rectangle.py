@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Rectangle:
     """Defines a rectangle"""
 
@@ -6,7 +7,11 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initializes a rectangle with a given width and height."""
+        """Initializes a rectangle with a given width and height.
+        Args:
+        width (int): The width of the new Rectangle
+        height (int): The height of the new Rectangle
+        """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -18,7 +23,13 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Sets the width of the rectangle."""
+        """Sets the width of the rectangle.
+        Args:
+        value: The value of the width of the rectangle
+        Raises:
+        TypeError: must be an int
+        ValueError: Must be grater than or equal to 0
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -60,13 +71,11 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Prints a message when an instance of Rectangle is deleted."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Returns the bigger rectangle based on the area."""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
