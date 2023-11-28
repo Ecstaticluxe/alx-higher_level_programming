@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle"""
+"""Defines a rectangle"""
 
 
 class Rectangle:
-    """Represents a rectangle
+    """Represent a rectangle.
+
     Attributes:
-    number_of_instance (int): The number of Rectangle instances.
-    print_symbol (any): the symbol for representation
+        number_of_instances (int): The number of Rectangle instances.
+        print_symbol (any): The symbol used for string representation.
     """
 
     number_of_instances = 0
@@ -15,8 +16,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initializes a rectangle with a given width and height.
         Args:
-        width (int): The width of the new rectangle
-        height (int): The height of teh new rectangle
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
         """
         self.width = width
         self.height = height
@@ -29,13 +30,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Sets the width of the rectangle.
-        Args:
-        Value (int): the value or size of the neww Rectangle
-        Raises:
-        TypeError: width must be an integer.
-        ValueError: width must be >= 0.
-        """
+        """Sets the width of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -64,8 +59,9 @@ class Rectangle:
 
     def perimeter(self):
         """Returns the perimeter of the rectangle."""
-        return 2 * (self.width + self.height)
-    if self.width != 0 and self.height != 0 else 0
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
         """Returns a string representation of the rectangle."""
