@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 import unittest
 from your_module_name import max_integer
 
