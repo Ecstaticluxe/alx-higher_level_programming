@@ -16,21 +16,12 @@ Checking for function docstring:
 	 >>> f = __import__("100-matrix_mul").matrix_mul.__doc__
          >>> len(f) > 1
          True
+
 Checking for no args:
-        >>> matrix_mul()
-        Traceback (most recent call last):
-        ...
-        TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
-
-        >>> matrix_mul([[1, 2], [3, 4]])
-        Traceback (most recent call last):
-        ...
-        TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
-
-        >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]], [[9, 10], [11, 12]])
-        Traceback (most recent call last):
-        ...
-        TypeError: matrix_mul() takes 2 positional arguments but 3 were given
+	 >>> matrix_mul()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
 
 Checking for one too few args:
 	 >>> matrix_mul([[1, 2], [3, 4]])
