@@ -1,0 +1,23 @@
+ 1-my_list.py module
+===========
+Using "MyList"
+=========================
+
+Importing the function from the module
+	>>> MyList = __import__("1-My-list").MyList
+Check for module docstring
+	>>> m = __import__("1-my_list").__doc__
+	>>> len(m) > 1
+	True
+
+
+Check for class docstring
+	>>> c = __import__("1-my_list").__doc__
+        >>> len(m) > 1
+	True
+Checking for method docstring
+
+
+Check for MyList inherits from list
+
+
