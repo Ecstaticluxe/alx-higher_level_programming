@@ -8,8 +8,8 @@ class Student:
 
 
     def __init__(self, first_name, last_name, age):
-    """Initialize a new Student.
-    Args:
+      """Initialize a new Student.
+      Args:
         first_name (str): the first name.
         last name (str): the last name.
         age (int): the age of the student.
@@ -19,5 +19,5 @@ class Student:
     self.age = age
 
     def to_json(self):
-        """retrieves a dictionary representation of a Student instance"""
-        return self
+        """retrieves a dictionary representation of a Student."""
+        return self.
