@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
-"""A class student"""
+"""A class Student"""
 
 
 class Student:
-    """Represents a student"""
+    """Represents a Student"""
 
     def __init__(self, first_name, last_name, age):
         """Initialize a new Student.
+
         Args:
             first_name (str): the first name.
             last_name (str): the last name.
@@ -19,4 +20,9 @@ class Student:
 
     def to_json(self):
         """Retrieves a dictionary representation of a Student."""
-        return self.
+        student_dict = {
+            'first_name': self.first_name,
+            'last_name': self.last_name,
+            'age': self.age
+        }
+        return student_dict
