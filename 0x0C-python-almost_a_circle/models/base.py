@@ -8,7 +8,6 @@ import csv
 import turtle
 
 
-
 class Base:
     """Base model
     this is the base for other models
