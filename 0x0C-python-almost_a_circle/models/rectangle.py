@@ -13,10 +13,10 @@ class Rectangle(Base):
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-            x (int, optional): The x-coordinate of the rectangle. Defaults to 0.
-            y (int, optional): The y-coordinate of the rectangle. Defaults to 0.
-            id (int, optional): The identifier of the rectangle. Defaults to None.
-            
+            x (int, optional): The x-coordinate of the rectangle.
+            y (int, optional): The y-coordinate of the rectangle.
+            id (int, optional): The identifier of the rectangle.
+
         Raises:
             TypeError: If either of width or height is not an int.
             ValueError: If either of width or height <= 0.
@@ -27,7 +27,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        self.id = id 
+        self.id = id
 
     @property
     def width(self):
@@ -103,7 +103,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Overriding the __str__ method."""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle]({self.id})
+    {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Adding the public method that assigns argument to attributes.
