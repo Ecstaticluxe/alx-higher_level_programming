@@ -4,7 +4,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square."""
+    """Square class, inherits from Rectangle."""
 
     def __init__(self, size, x=0, y=0, id=None):
         """Initialize a new Square.
@@ -73,4 +73,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return the print() and the str() representation of a Square."""
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x,
+                                    self.y, self.width)
