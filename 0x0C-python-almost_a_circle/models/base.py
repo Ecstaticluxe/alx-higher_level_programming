@@ -10,9 +10,7 @@ import turtle
 
 class Base:
     """Base model
-    this is the base for other models
-    private ca
-    lass attribute:
+    this is the base for other models private class attribute:
      __nb_objects (int): must be an integer.
      """
 
