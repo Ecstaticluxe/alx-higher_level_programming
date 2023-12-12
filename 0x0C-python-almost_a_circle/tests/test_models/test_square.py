@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Defines unittests for models/square.py.
-""""
+
+"""Defines unittests for models/square.py."""
+
 import io
 import sys
 import unittest
@@ -9,6 +10,7 @@ from models.square import Square
 
 
 class TestSquare_instantiation(unittest.TestCase):
+
     """Unittests for testing instantiation of the Square class."""
 
     def test_is_base(self):
