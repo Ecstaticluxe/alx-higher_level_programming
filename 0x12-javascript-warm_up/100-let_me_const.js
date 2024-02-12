@@ -1,2 +1,2 @@
-#!/usr/bin/note
+#!/usr/bin/node
 myVar = 333;
