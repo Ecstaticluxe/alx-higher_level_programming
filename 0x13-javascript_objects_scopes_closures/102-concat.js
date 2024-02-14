@@ -1,31 +1,22 @@
 #!/usr/bin/node
 const fs = require('fs');
 
-function concatFiles(sourceFilePath1, sourceFilePath2, destinationFilePath) {
-    try {
+const fileA = process.argv[2];
+const fileB = process.argv[3];
+const fileC = process.argv[4];
 
-        const fileA = fs.readFileSync(sourceFilePath1, 'utf8');
-        
+if (
+  fs.existsSync(fileA) &&
+fs.statSync(fileA).isFile &&
+fs.existsSync(fileB) &&
+fs.statSync(fileB).isFile &&
+fileC !== undefined
+) {
+  const fileAContent = fs.readFileSync(fileA);
+  const fileBContent = fs.readFileSync(fileB);
+  const stream = fs.createWriteStream(fileC);
 
-        const fileB = fs.readFileSync(sourceFilePath2, 'utf8');
-        const concatenatedData = fileA + fileB;
-
-
-        fs.writeFileSync(destinationFilePath, concatenatedData);
-
-        console.log('Files concatenated successfully!');
-    } catch (error) {
-        console.error('Error:', error);
-    }
+  stream.write(fileAContent);
+  stream.write(fileBContent);
+  stream.end();
 }
-
-
-const [,, sourceFilePath1, sourceFilePath2, destinationFilePath] = process.argv;
-
-
-if (!sourceFilePath1 || !sourceFilePath2 || !destinationFilePath) {
-    console.error('Usage: node concatFiles.js <sourceFilePath1> <sourceFilePath2> <destinationFilePath>');
-    process.exit(1);
-}
-
-concatFiles(sourceFilePath1, sourceFilePath2, destinationFilePath);
