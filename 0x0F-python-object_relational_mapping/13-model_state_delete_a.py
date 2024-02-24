@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This script lists all State objects
-that contain the letter `a`
+This script deletes all State objects
+with a name containing the letter `a`
 from the database `hbtn_0e_6_usa`.
 """
 
@@ -12,8 +12,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Access to the database and get a state
-    from the database.
+    Deletes State objects on the database.
     """
 
     db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
@@ -27,4 +26,8 @@ if __name__ == "__main__":
     states = session.query(State).filter(State.name.contains('a'))
     if states is not None:
         for state in states:
-            print('{0}: {1}'.format(state.id, state.name))
+            session.delete(state)
+
+    session.commit()
+
+    session.close()

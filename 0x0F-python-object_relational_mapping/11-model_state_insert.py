@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-This script lists all State objects
-that contain the letter `a`
-from the database `hbtn_0e_6_usa`.
+This script adds the State object
+`Louisiana` to the database `hbtn_0e_6_usa`.
 """
 
 from sys import argv
@@ -24,7 +23,9 @@ if __name__ == "__main__":
 
     session = Session()
 
-    states = session.query(State).filter(State.name.contains('a'))
-    if states is not None:
-        for state in states:
-            print('{0}: {1}'.format(state.id, state.name))
+    new_state = State(name="Louisiana")
+    session.add(new_state)
+    session.commit()
+
+    print('{0}'.format(new_state.id))
+    session.close()
